@@ -61,14 +61,14 @@ async def e(o):
         uptime = grt((time.time() - start_time))
         ALIVEMSG = """
 **...ULTROID-2.0 USERBOT...**\n\n
-➥ **Owner** - `{}`
+➥ **Owner** - **{}**
 ➥ **Ultroid** - `{}`
 ➥ **UpTime** - `{}`
 ➥ **Python** - `{}`
 ➥ **Telethon** - `{}`
 ➥ **Branch** - `{}`
 """.format(
-            [λ](https://telegram.me/Ninja_X_001),
+            __@Warning_MadBoy_is_Here__,
             ultroid_version,
             uptime,
             pyver(),

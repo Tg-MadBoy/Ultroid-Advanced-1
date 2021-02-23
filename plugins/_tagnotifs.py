@@ -21,7 +21,7 @@ from . import *
 async def all_messages_catcher(event):
     if udB.get("TAG_LOG") is not None:
         NEEDTOLOG = int(udB.get("TAG_LOG"))
-        await event.forward_to(NEEDTOLOG)
+        await event.forward_to(TAG_LOG)
         ammoca_message = ""
         who_ = await event.client.get_entity(event.sender_id)
         if who_.bot or who_.verified or who_.support:
@@ -39,7 +39,7 @@ async def all_messages_catcher(event):
         ammoca_message += f"{who_m} tagged you in [{where_m}]({chat_link})"
         try:
             await asst.send_message(
-                entity=NEEDTOLOG,
+                entity=TAG_LOG,
                 message=ammoca_message,
                 link_preview=False,
                 buttons=[[custom.Button.url(button_text, message_link)]],

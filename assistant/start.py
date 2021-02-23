@@ -106,8 +106,8 @@ async def setting(event):
     await event.edit(
         "Choose from the below options -",
         buttons=[
-            [custom.Button.inline("Alive Customisation", data="alvcstm")],
-            [custom.Button.inline("API Keys", data="apiset")],
-            [custom.Button.inline("Other Vars.", data="otvars")],
+            [custom.Button.inline("Alive Customisation 🛠", data="alvcstm")],
+            [custom.Button.inline("API Keys 🔐", data="apiset")],
+            [custom.Button.inline("Other Vars 🔦", data="otvars")],
         ],
     )

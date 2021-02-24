@@ -275,10 +275,10 @@ async def hehe(args):
                         await ultroid_bot.send_read_acknowledge(conv.chat_id)
                         await xx.edit(
                             f"__Sticker added in a Different Pack !__✅\
-                            \n**This Pack is Newly created!\
-                            \nYour pack can be found [HERE](t.me/addstickers/{packname})\
-                            \nSticker Pack kanged By Ultroid-Advanced..👍\
-                            \nKanged by :~ __@Warning_MadBoy_is_Here__.**",
+                            \n**This Pack is Newly created!👍**\
+                            \n**Your pack can be found [HERE](t.me/addstickers/{packname})**\
+                            \n**Sticker Pack kanged By Ultroid-Advanced..👍**\
+                            \n**Kanged by :~ __@Warning_MadBoy_is_Here__.**",
                             parse_mode="md",
                         )
                         return
@@ -341,9 +341,9 @@ async def hehe(args):
         await xx.edit(
             f"__Sticker Kanged to our Pack!__✅\
             \n**Emoji** - {emoji}\
-            \n**Sticker Pack [HERE](t.me/addstickers/{packname})\
-            \nSticker Pack kanged By Ultroid-Advanced..👍\
-            \nKanged by** :~ **__@Warning_MadBoy_is_Here__.**",
+            \n**Sticker Pack [HERE](t.me/addstickers/{packname})**\
+            \n**Sticker Pack kanged By Ultroid-Advanced..👍**\
+            \n**Kanged by** :~ **__@Warning_MadBoy_is_Here__.**",
             parse_mode="md",
         )
         try:

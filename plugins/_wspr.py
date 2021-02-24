@@ -50,7 +50,7 @@ async def _(e):
             )
         except dis:
             return await eor(
-                e, "**Please turn on inline mode for your bot from __@Botfather__.**"
+                e, "Please turn on inline mode for your bot from @Botfather."
             )
         await results[0].click(e.chat_id, reply_to=e.reply_to_msg_id, hide_via=True)
         await e.delete()
@@ -126,7 +126,7 @@ async def _(e):
             sur = e.builder.article(
                 title=f"{logi.first_name}",
                 description=desc,
-                text=f"@{logi.username} a Secret Msg for you.\nDelete your msg after reading.\nOr the next msg will not be updated...👍",
+                text=f"**@{logi.username} a Secret Msg for you.\nDelete your msg after reading.\nOr the next msg will not be updated...👍**",
                 buttons=button,
             )
             buddhhu.append(meme)
@@ -149,7 +149,7 @@ async def _(e):
     if e.sender_id in buddhhu:
         await e.answer(snap[ids], alert=True)
     else:
-        await e.answer("**Eeew, This Message is not for you...\nBetter go and do your own work.👍**", alert=True)
+        await e.answer("Eeew, This Message is not for you...\nBetter go and do your own work.👍", alert=True)
 
 
 @callback("del")
@@ -166,4 +166,4 @@ async def _(e):
             except np:
                 pass
     else:
-        await e.answer("**You are not allowed to do this!!!**", alert=True)
+        await e.answer("You are not allowed to do this!!!", alert=True)

@@ -89,7 +89,7 @@ async def lol(ult):
         pyver(),
         __version__,
         Repo().active_branch,
-        Db_status
+        Db_status,
     )
     if pic is None:
         await ult.edit(als)

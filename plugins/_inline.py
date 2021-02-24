@@ -60,7 +60,7 @@ async def e(o):
         b = o.builder
         uptime = grt((time.time() - start_time))
         ALIVEMSG = """
-**...ULTROID-2.0 USERBOT...**\n\n
+**...ULTROID-ADVANCED USERBOT...**\n\n
 ➥ **Owner** - **{}**
 ➥ **Ultroid** - `{}`
 ➥ **UpTime** - `{}`
@@ -77,7 +77,7 @@ async def e(o):
         )
         res = [
             b.article(
-                title="UlLTROID-2.0 USERBOT",
+                title="UlLTROID-ADVANCED USERBOT",
                 url="https://t.me/TeamUltroid",
                 description="Userbot | Telethon ",
                 text=ALIVEMSG,

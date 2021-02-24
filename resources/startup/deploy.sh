@@ -29,14 +29,14 @@ apt-get autoremove --purge
 echo '
         •• Cloning Repository
 '
-git clone https://github.com/madboy482/Ultroid-Advanced.git /root/Ultroid-Advanced/
+git clone https://github.com/madboy482/Ultroid-Advanced.git /root/madboy482/
 
 echo '
 	•• Getting Libraries and Installing
 '
 pip install --upgrade pip setuptools wheel
 pip install search-engine-parser==0.6.2
-pip install -r /root/Ultroid-Advanced/requirements.txt
+pip install -r /root/madboy482/requirements.txt
 
 echo "
 

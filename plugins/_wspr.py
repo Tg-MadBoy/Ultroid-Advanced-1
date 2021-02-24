@@ -35,7 +35,7 @@ async def _(e):
         except ValueError as ex:
             return await eor(e, str(ex))
         except AttributeError:
-            return await eor(e, "No username of replied user wad found")
+            return await eor(e, "No username of replied user was found")
     else:
         put = e.pattern_match.group(1)
     if put:
@@ -50,12 +50,12 @@ async def _(e):
             )
         except dis:
             return await eor(
-                e, "`Please turn on inline mode for your bot from` @Botfather."
+                e, "**Please turn on inline mode for your bot from __@Botfather__.**"
             )
         await results[0].click(e.chat_id, reply_to=e.reply_to_msg_id, hide_via=True)
         await e.delete()
     else:
-        await eor(e, "Add some id or username too")
+        await eor(e, "Add some id or username too!")
 
 
 @in_pattern("msg")
@@ -86,22 +86,22 @@ async def _(e):
             if isinstance(x, off):
                 status = "Offline"
             if isinstance(x, rec):
-                status = "Last Seen Recently"
+                status = "Last Seen Recently".
             if isinstance(x, lm):
-                status = "Last seen months ago"
+                status = "Last seen months ago."
             if isinstance(x, lw):
-                status = "Last seen weeks ago"
+                status = "Last seen weeks ago."
             if isinstance(x, mt):
                 status = "Can't Tell"
-            text = f"**Name:**    `{name}`\n"
-            text += f"**Id:**    `{ids}`\n"
-            text += f"**Username:**    `{username}`\n"
-            text += f"**Status:**    `{status}`\n"
-            text += f"**About:**    `{bio}`"
+            text = f"➥ **Name:**    `{name}`\n"
+            text += f"➥ **Id:**    `{ids}`\n"
+            text += f"➥ **Username:**    `{username}`\n"
+            text += f"➥ **Status:**    `{status}`\n"
+            text += f"➥ **About:**    `{bio}`"
             button = [
-                Button.url("Private", url=f"t.me/{username}"),
+                Button.url("Private 👀", url=f"t.me/{username}"),
                 Button.switch_inline(
-                    "Secret msg", query=f"msg {query} wspr ", same_peer=True
+                    "Secret Msg 😏", query=f"msg {query} wspr ", same_peer=True
                 ),
             ]
             sur = e.builder.article(
@@ -111,7 +111,7 @@ async def _(e):
                 buttons=button,
             )
         except BaseException:
-            name = f"User {query} Not Found\nSearch Again"
+            name = f"User {query} Not Found\nSearch Again!!"
             sur = e.builder.article(
                 title=name,
                 text=name,
@@ -120,13 +120,13 @@ async def _(e):
         try:
             logi = await ultroid_bot.get_entity(query)
             button = [
-                Button.inline("Secret Msg", data=f"dd_{logi.id}"),
-                Button.inline("Delete Msg", data=f"del"),
+                Button.inline("Secret Msg 😏", data=f"dd_{logi.id}"),
+                Button.inline("Delete Msg 🗑", data=f"del"),
             ]
             sur = e.builder.article(
                 title=f"{logi.first_name}",
                 description=desc,
-                text=f"@{logi.username} secret msg for you.\nDelete your msg after reading.\nOr the next msg will not be updated.",
+                text=f"@{logi.username} a Secret Msg for you.\nDelete your msg after reading.\nOr the next msg will not be updated...👍",
                 buttons=button,
             )
             buddhhu.append(meme)
@@ -134,7 +134,7 @@ async def _(e):
             snap.update({logi.id: desc})
         except ValueError:
             sur = e.builder.article(
-                title="Type ur msg", text=f"You Didn't Type Your Msg"
+                title="Type ur msg...", text=f"You Didn't Type Your Msg!!"
             )
     await e.answer([sur])
 
@@ -149,7 +149,7 @@ async def _(e):
     if e.sender_id in buddhhu:
         await e.answer(snap[ids], alert=True)
     else:
-        await e.answer("Not For You", alert=True)
+        await e.answer("**Eeew, This Message is not for you...\nBetter go and do your own work.👍**", alert=True)
 
 
 @callback("del")
@@ -162,8 +162,8 @@ async def _(e):
             except KeyError:
                 pass
             try:
-                await e.edit("Msg deleted")
+                await e.edit("**Msg deleted!✅**")
             except np:
                 pass
     else:
-        await e.answer("You Can't do this", alert=True)
+        await e.answer("**You are not allowed to do this!!!**", alert=True)

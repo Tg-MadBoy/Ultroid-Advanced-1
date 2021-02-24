@@ -59,6 +59,7 @@ async def e(o):
     if len(o.text) == 0:
         b = o.builder
         uptime = grt((time.time() - start_time))
+        Db_status = "Functioning✅"
         ALIVEMSG = """
 **...ULTROID-ADVANCED USERBOT...**\n\n
 ➥ **Owner** - **{}**
@@ -67,6 +68,7 @@ async def e(o):
 ➥ **Python** - `{}`
 ➥ **Telethon** - `{}`
 ➥ **Branch** - `{}`
+➥ **Database** - `{}`
 """.format(
             OWNER_NAME,
             ultroid_version,
@@ -74,17 +76,18 @@ async def e(o):
             pyver(),
             __version__,
             Repo().active_branch,
+            Db_status
         )
         res = [
             b.article(
-                title="UlLTROID-ADVANCED USERBOT",
+                title="ULTROID-ADVANCED USERBOT",
                 url="https://t.me/TeamUltroid",
                 description="Userbot | Telethon ",
                 text=ALIVEMSG,
                 thumb=InputWebDocument(ULTROID_PIC, 0, "image/jpeg", []),
             )
         ]
-        await o.answer(res, switch_pm=f"👥 ULTROID PORTAL", switch_pm_param="start")
+        await o.answer(res, switch_pm=f"👥 ULTROID-ADVANCED PORTAL", switch_pm_param="start")
 
 
 if Var.BOT_USERNAME is not None and asst is not None:

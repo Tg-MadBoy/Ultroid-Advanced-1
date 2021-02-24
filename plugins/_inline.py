@@ -68,7 +68,7 @@ async def e(o):
 ➥ **Telethon** - `{}`
 ➥ **Branch** - `{}`
 """.format(
-            __@Warning_MadBoy_is_Here__,
+            OWNER_NAME,
             ultroid_version,
             uptime,
             pyver(),

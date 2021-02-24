@@ -76,7 +76,7 @@ async def e(o):
             pyver(),
             __version__,
             Repo().active_branch,
-            Db_status
+            Db_status,
         )
         res = [
             b.article(

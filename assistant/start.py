@@ -24,7 +24,7 @@ async def assistant(event):
             add_user(event.sender_id)
             await asst.send_message(
                 OWNER_ID,
-                f"**Bot started by <i>[{event.sender_id}](tg://user?id={event.sender_id})</i>**",
+                f"**Yo, Master!!\nYour Bot was started by __[{event.sender_id}](tg://user?id={event.sender_id})__\nHave a Good-Day ahead!👋👋**",
             )
         ok = ""
         if Var.MSG_FRWD is True:
@@ -32,7 +32,7 @@ async def assistant(event):
         if event.is_private and event.sender_id in sed:
             return
         await event.reply(
-            f"**Hey there, this is __ULTROID-2.0 ASSISTANT__ of __@Warning_MadBoy_is_Here__!!**\n\n{ok}",
+            f"**Hey there, this is __ULTROID-ADVANCED ASSISTANT__ of __@Warning_MadBoy_is_Here__!!**\n\n{ok}",
             buttons=[Button.url("Know More 🤔", url="https://t.me/TeamUltroid")],
         )
 
@@ -57,7 +57,7 @@ async def ultroid(event):
 @owner
 async def botstat(event):
     ok = len(get_all_users())
-    msg = """ULTROID-2.0 ASSISTANT - Stats
+    msg = """ULTROID-ADVANCED ASSISTANT - Stats
 Total Users - {}""".format(
         ok
     )
@@ -77,7 +77,7 @@ async def bdcast(event):
         response = await response
         themssg = response.message.message
         if themssg == "/cancel":
-            return await conv.send_message("Cancelled!!")
+            return await conv.send_message("**Cancelled the current operation Successfully!! ☑️☑️**")
         else:
             success = 0
             fail = 0

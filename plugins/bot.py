@@ -65,11 +65,12 @@ except BaseException:
     pattern="alive$",
 )
 async def lol(ult):
+    Db_status = "Functioning✅"
     pic = udB.get("ALIVE_PIC")
     uptime = grt((time.time() - start_time))
-    header = udB.get("ALIVE_TEXT") if udB.get("ALIVE_TEXT") else "Hey,  I am alive."
+    header = udB.get("ALIVE_TEXT") if udB.get("ALIVE_TEXT") else "**✧✧ ULTROID-ADVANCED IS UP AND RUNNING SUCCESSFULLY✅ ✧✧**"
     als = """
-**...ULTROID-2.0 USERBOT...**
+**...ULTROID-ADVANCED USERBOT...**
 
 **{}**
 
@@ -79,6 +80,7 @@ async def lol(ult):
 ➥ **Python** - `{}`
 ➥ **Telethon** - `{}`
 ➥ **Branch** - `{}`
+➥ **Database** - `{}`
 """.format(
         header,
         OWNER_NAME,
@@ -87,6 +89,7 @@ async def lol(ult):
         pyver(),
         __version__,
         Repo().active_branch,
+        Db_status
     )
     if pic is None:
         await ult.edit(als)

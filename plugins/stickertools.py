@@ -66,7 +66,7 @@ EMOJI_PATTERN = re.compile(
 
 
 def deEmojify(inputString: str) -> str:
-    """Remove emojis and other non-safe characters from string"""
+    """Remove emojis and other non-safe characters from string..."""
     return re.sub(EMOJI_PATTERN, "", inputString)
 
 
@@ -81,7 +81,7 @@ async def waifu(animu):
         if animu.is_reply:
             text = (await animu.get_reply_message()).message
         else:
-            await xx.edit("`You haven't written any article, Waifu is going away.`")
+            await xx.edit("`You haven't written any article...\nWaifu is going away...`")
             return
     waifus = [32,33,37,40,41,42,58,20]
     finalcall = "#" + (str(random.choice(waifus)))
@@ -97,9 +97,9 @@ async def waifu(animu):
         )
         await xx.delete()
     except ChatSendInlineForbiddenError:
-        await xx.edit("`Boss ! I cant use inline things here...`")
+        await xx.edit("**Eeew, Boss !! I can't use inline things here...**")
     except ChatSendStickersForbiddenError:
-        await xx.edit("Sorry boss, I can't send Sticker Here !!")
+        await xx.edit("Sorry boss, I can't send Stickers Here !!")
 
 
 @ultroid_cmd(
@@ -192,7 +192,7 @@ async def hehe(args):
     if photo:
         splat = args.text.split()
         if not emojibypass:
-            emoji = "🔰"
+            emoji = "😋"
         pack = 1
         if len(splat) == 3:
             pack = splat[2]  # User sent ultroid_both
@@ -274,9 +274,11 @@ async def hehe(args):
                         await conv.get_response()
                         await ultroid_bot.send_read_acknowledge(conv.chat_id)
                         await xx.edit(
-                            f"`Sticker added in a Different Pack !\
-                            \nThis Pack is Newly created!\
-                            \nYour pack can be found [here](t.me/addstickers/{packname})",
+                            f"__Sticker added in a Different Pack !__✅\
+                            \n**This Pack is Newly created!\
+                            \nYour pack can be found [HERE](t.me/addstickers/{packname})\
+                            \nSticker Pack kanged By Ultroid-Advanced..👍\
+                            \nKanged by :~ __@Warning_MadBoy_is_Here__.**",
                             parse_mode="md",
                         )
                         return
@@ -337,9 +339,11 @@ async def hehe(args):
                 await conv.get_response()
                 await ultroid_bot.send_read_acknowledge(conv.chat_id)
         await xx.edit(
-            f"`Kanged!`\
-            \n`Emoji` - {emoji}\
-            \n`Sticker Pack` [here](t.me/addstickers/{packname})",
+            f"__Sticker Kanged to our Pack!__✅\
+            \n**Emoji** - {emoji}\
+            \n**Sticker Pack [HERE](t.me/addstickers/{packname})\
+            \nSticker Pack kanged By Ultroid-Advanced..👍\
+            \nKanged by** :~ **__@Warning_MadBoy_is_Here__.**",
             parse_mode="md",
         )
         try:
@@ -359,7 +363,7 @@ async def ultdround(event):
         return
     ultt = await ureply.download_media()
     if ultt.endswith(".tgs"):
-        await xx.edit("`Ooo Animated Sticker 👀...`")
+        await xx.edit("**OwO Animated Sticker 👀...**")
         cmd = ["lottie_convert.py", ultt, "ult.png"]
         file = "ult.png"
         process = await asyncio.create_subprocess_exec(
